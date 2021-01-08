@@ -7,9 +7,10 @@ public class Spawner : MonoBehaviour
     
     public float carTimer = 0;
     public float maxCarTime = 30;
-    public float carSpeed = 2;
+    public float carSpeed = 1;
     public float obstacleTimer = 0;
-    public float maxObstacleTime = 100;
+    public float maxObstacleTime = 7;
+    public float obstacleSpeed = 4;
     public GameObject enemyCar;
     public GameObject obstacle;
 
@@ -26,6 +27,12 @@ public class Spawner : MonoBehaviour
             GameObject new_car = Instantiate(enemyCar);
             new_car.transform.position = transform.position;
             carTimer = 0;
+        }
+
+        if(obstacleTimer > maxObstacleTime){
+            GameObject new_obstacle = Instantiate(obstacle);
+            new_obstacle.transform.position = transform.position;
+            obstacleTimer = 0;
         }
 
         carTimer += Time.deltaTime;

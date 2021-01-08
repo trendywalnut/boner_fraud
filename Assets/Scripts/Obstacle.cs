@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCar : MonoBehaviour
+public class Obstacle : MonoBehaviour
 {
     
-    public float newCarSpeed = 30;
+    public float newObstacleSpeed = 4;
     public float lifespan = 10;
     
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class EnemyCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(Vector3.left * newCarSpeed * Time.deltaTime);
+        this.transform.Translate(Vector3.left * newObstacleSpeed * Time.deltaTime);
         lifespan -= Time.deltaTime;
 
         if(lifespan <= 0){
