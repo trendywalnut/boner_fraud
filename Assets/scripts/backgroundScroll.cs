@@ -8,7 +8,7 @@ public class backgroundScroll : MonoBehaviour
     Material material;
     Vector2 offset;
 
-    public int xVel;
+    public float xVel;
 
     private void Awake()
     {
