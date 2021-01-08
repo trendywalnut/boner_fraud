@@ -31,4 +31,5 @@ public class Spawner : MonoBehaviour
         carTimer += Time.deltaTime;
         obstacleTimer += Time.deltaTime;
     }
+
 }
