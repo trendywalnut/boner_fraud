@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6058710672580094100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.825, y: 15.299, z: -7.394881}
-  m_LocalScale: {x: 0.9636327, y: 0.3694532, z: 1}
+  m_LocalScale: {x: 0.313051, y: 0.1544829, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,5 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e3522fba3538d43b14fc93a4913828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newObstacleSpeed: 15
+  myObstacleSpeed: 0
   lifespan: 10
