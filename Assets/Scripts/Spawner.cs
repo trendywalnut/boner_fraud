@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     public GameObject enemyCar;
     public GameObject obstacle;
     public float yPosition;
-    private float[] positions = new float[]{1.5f, -0.5f, -2.5f};
+    public float[] positions = new float[]{1.5f, -0.5f, -2.5f};
     private int lastLane; //Remembers last lane so obstacles never overlap
     private int myLane;
 
