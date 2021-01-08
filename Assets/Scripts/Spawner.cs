@@ -7,10 +7,10 @@ public class Spawner : MonoBehaviour
     
     public float carTimer = 0;
     public float maxCarTime = 30;
-    public float carSpeed = 1;
+    public static float carSpeed = 4;
     public float obstacleTimer = 0;
     public float maxObstacleTime = 7;
-    public float obstacleSpeed = 4;
+    public static float obstacleSpeed = 8;
     public GameObject enemyCar;
     public GameObject obstacle;
     public float yPosition;
@@ -46,9 +46,9 @@ public class Spawner : MonoBehaviour
     }
 
     void pickRandomLane(){
-        myLane = Random.Range(0, 2);
+        myLane = Random.Range(0, 3);
         while(myLane == lastLane){
-            myLane = Random.Range(0, 2);
+            myLane = Random.Range(0, 3);
         }
         yPosition = positions[myLane];
         lastLane = myLane;
