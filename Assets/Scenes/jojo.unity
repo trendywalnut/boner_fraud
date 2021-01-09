@@ -1229,6 +1229,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 78876895}
     m_Modifications:
+    - target: {fileID: 1905770678293362469, guid: e816d18b9d927af4da530cecc1df0e1c,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1905770679452957709, guid: e816d18b9d927af4da530cecc1df0e1c,
         type: 3}
       propertyPath: m_Name
@@ -1354,5 +1359,25 @@ PrefabInstance:
       propertyPath: dialogueBoxes.Array.data[3]
       value: 
       objectReference: {fileID: 78704068}
+    - target: {fileID: 5905056786889088269, guid: e816d18b9d927af4da530cecc1df0e1c,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193797547504780001, guid: e816d18b9d927af4da530cecc1df0e1c,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857645001093435395, guid: e816d18b9d927af4da530cecc1df0e1c,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857645001093435395, guid: e816d18b9d927af4da530cecc1df0e1c,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e816d18b9d927af4da530cecc1df0e1c, type: 3}

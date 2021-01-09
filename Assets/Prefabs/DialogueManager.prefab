@@ -209,14 +209,14 @@ RectTransform:
   m_GameObject: {fileID: 1009347275934163173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24999852, y: 0.24999852, z: 1}
+  m_LocalScale: {x: 0.24999854, y: 0.24999854, z: 1}
   m_Children: []
   m_Father: {fileID: 4349263690358553184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.19995, y: -238.30005}
+  m_AnchoredPosition: {x: 86.20004, y: -238.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9207776798298986594
@@ -326,7 +326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.2, y: -238.3}
+  m_AnchoredPosition: {x: 86.2, y: -238.29996}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6311212523527221740
@@ -633,6 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1905770678604865638}
+  - component: {fileID: 3925074563166272729}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -662,6 +663,24 @@ RectTransform:
   m_AnchoredPosition: {x: 115, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3925074563166272729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905770678604865637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee72e21d9c093e40aa963bc30858de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.03
+  fullText: 'Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
+    Sample Text Sample Text Sample Text '
+  allTextShown: 0
+  strawberry: {fileID: 1816637438433058563}
+  textMesh: {fileID: 1905770678293362469}
 --- !u!1 &1905770679452957709
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4349263690358553184}
+  - component: {fileID: 1863070919367754049}
   m_Layer: 5
   m_Name: DialogueBox (4)
   m_TagString: Untagged
@@ -892,6 +912,24 @@ RectTransform:
   m_AnchoredPosition: {x: 115, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1863070919367754049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483095870089680394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee72e21d9c093e40aa963bc30858de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.03
+  fullText: Sample Text  2 Sample Text  2 Sample Text  2 Sample Text  2 Sample Text 
+    2 Sample Text  2 Sample Text  2 Sample Text  2
+  allTextShown: 0
+  strawberry: {fileID: 1009347275934163173}
+  textMesh: {fileID: 8193797547504780001}
 --- !u!1 &3765520050874069636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99015879860735395}
+  - component: {fileID: 2213952540935491406}
   m_Layer: 5
   m_Name: DialogueBox (5)
   m_TagString: Untagged
@@ -1064,6 +1103,24 @@ RectTransform:
   m_AnchoredPosition: {x: 115, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2213952540935491406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024595335632919194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee72e21d9c093e40aa963bc30858de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.03
+  fullText: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text
+    3 Sample Text 3 Sample Text 3 Sample Text 3 '
+  allTextShown: 0
+  strawberry: {fileID: 6115196047315705138}
+  textMesh: {fileID: 5905056786889088269}
 --- !u!1 &6041591514894378479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,14 +1150,14 @@ RectTransform:
   m_GameObject: {fileID: 6041591514894378479}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24999851, y: 0.24999851, z: 1}
+  m_LocalScale: {x: 0.24999854, y: 0.24999854, z: 1}
   m_Children: []
   m_Father: {fileID: 788979444051854140}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.19995, y: -238.30005}
+  m_AnchoredPosition: {x: 86.20004, y: -238.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5741257463257836409
@@ -1203,14 +1260,14 @@ RectTransform:
   m_GameObject: {fileID: 6115196047315705138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24999851, y: 0.24999851, z: 1}
+  m_LocalScale: {x: 0.24999854, y: 0.24999854, z: 1}
   m_Children: []
   m_Father: {fileID: 99015879860735395}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.19995, y: -238.30005}
+  m_AnchoredPosition: {x: 86.20004, y: -238.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6115961433251191974
@@ -1427,6 +1484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 788979444051854140}
+  - component: {fileID: 6140733721160207965}
   m_Layer: 5
   m_Name: DialogueBox (6)
   m_TagString: Untagged
@@ -1456,6 +1514,24 @@ RectTransform:
   m_AnchoredPosition: {x: 115, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6140733721160207965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140211421141050280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee72e21d9c093e40aa963bc30858de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.03
+  fullText: 'Sample Text 4 Sample Text 4 Sample Text 4 Sample Text 4 Sample Text
+    4 Sample Text 4 Sample Text 4 '
+  allTextShown: 0
+  strawberry: {fileID: 6041591514894378479}
+  textMesh: {fileID: 8857645001093435395}
 --- !u!1 &9078455655521022434
 GameObject:
   m_ObjectHideFlags: 0
