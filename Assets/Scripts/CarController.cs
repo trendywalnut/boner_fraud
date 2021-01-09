@@ -11,6 +11,8 @@ public class CarController : MonoBehaviour
     public float moveSpeed;
     public bool useFourDirections;
 
+    public float starRating = 5;
+
     private void Start()
     {
         tf = GetComponent<Transform>();
