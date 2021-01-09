@@ -5,18 +5,23 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     
-    public float carTimer = 0;
+    private float carTimer = 0;
     public float maxCarTime = 30;
     public static float carSpeed = 4;
-    public float obstacleTimer = 0;
+    private float obstacleTimer = 0;
     public float maxObstacleTime = 7;
     public static float obstacleSpeed = 8;
+    public static float warningDelay = 1.0f;
+    private float warningTimer = 0.0f;
     public GameObject enemyCar;
     public GameObject obstacle;
-    public float yPosition;
+    public GameObject warning;
+    private float yPosition;
     public float[] positions = new float[]{1.5f, -0.5f, -2.5f};
     private int lastLane; //Remembers last lane so obstacles never overlap
     private int myLane;
+    private int obstacleLane;
+    private bool isWarning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +39,26 @@ public class Spawner : MonoBehaviour
             carTimer = 0;
         }
 
-        if(obstacleTimer > maxObstacleTime){
+        if(obstacleTimer > maxObstacleTime && !isWarning){
             pickRandomLane();
+            obstacleLane = myLane;
+            GameObject new_warning = Instantiate(warning);
+            new_warning.transform.position = transform.position;
+            isWarning = true;
+        }
+
+        if(warningTimer > warningDelay){
+            yPosition = positions[obstacleLane];
+            transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
             GameObject new_obstacle = Instantiate(obstacle);
             new_obstacle.transform.position = transform.position;
             obstacleTimer = 0;
+            isWarning = false;
+            warningTimer = 0;
+        }
+
+        if(isWarning){
+            warningTimer += Time.deltaTime;
         }
 
         carTimer += Time.deltaTime;
