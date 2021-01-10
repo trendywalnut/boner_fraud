@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool inGameScene = false;
 
-    private void Start()
+    private void Awake()
     {
         dialogueI = 0;
         dialogueBoxes[0].SetActive(true);
@@ -43,7 +43,9 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true)
+        //Debug.Log("Index: " + dialogueI + "\n Boxes: " + dialogueBoxes.Length);
+
+        if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true && dialogueI < dialogueBoxes.Length)
         {
             if (dialogueI == dialogueBoxes.Length - 1)
             {
