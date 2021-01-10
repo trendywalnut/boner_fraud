@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueSceneManager : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class DialogueSceneManager : MonoBehaviour
         if (dM.dialogueI >= 4)
         {
             firstScene = false;
+        }
+
+        if (dM.dialogueI >= 14)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
