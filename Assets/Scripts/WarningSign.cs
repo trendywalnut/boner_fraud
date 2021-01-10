@@ -10,12 +10,6 @@ public class WarningSign : MonoBehaviour
     public float lifespan = Spawner.warningDelay;
     public bool isVisible;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        transform.position = new Vector3(4f, transform.position.y, transform.position.z);
-    }
-
     // Update is called once per frame
     void Update()
     {

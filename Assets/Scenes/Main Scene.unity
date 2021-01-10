@@ -1444,8 +1444,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
         type: 3}
+      propertyPath: copCar
+      value: 
+      objectReference: {fileID: 1352824956712410777, guid: 99866faadc06d4a43a0f8ee6368984bf,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
       propertyPath: positions.Array.data[2]
       value: -1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: copPositions.Array.data[0]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: copPositions.Array.data[1]
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
         type: 3}
