@@ -30,7 +30,7 @@ public class EnemyCar : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
+        //Debug.Log("test");
         if (carController.starRating >= 2)
         {
             carController.starRating--;

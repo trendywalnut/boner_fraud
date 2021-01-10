@@ -7,10 +7,15 @@ public class Obstacle : MonoBehaviour
     
     public float myObstacleSpeed;
     public float lifespan = 10;
-    
+
+    private GameObject player;
+    private CarController carController;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        carController = player.GetComponent<CarController>();
         myObstacleSpeed = Spawner.obstacleSpeed;
     }
 
@@ -22,6 +27,21 @@ public class Obstacle : MonoBehaviour
 
         if(lifespan <= 0){
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("test");
+        if (carController.starRating >= 2)
+        {
+            carController.starRating--;
+            Debug.Log(carController.starRating);
+        }
+        else if (carController.starRating == 1)
+        {
+            //game over gottem
+            Debug.Log("end game");
         }
     }
 

@@ -47,7 +47,7 @@ MonoBehaviour:
   maxObstacleTime: 7
   enemyCar: {fileID: 4951339264748444395, guid: 956db7bacefcf774384f80bb89095ed6,
     type: 3}
-  obstacle: {fileID: 6058710672580094100, guid: 3f2fc6c318cbe834b9c2a6bd68eb6cc6,
+  obstacle: {fileID: 3384222047688597416, guid: 6753b8b4d9b479048a62ed7785a65f16,
     type: 3}
   warning: {fileID: 3089144129186342167, guid: 9c6571fd0ef06454cb368debbb6d5b61, type: 3}
   carPositions:

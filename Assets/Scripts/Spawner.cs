@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public static float carSpeed = 6f;
     private float obstacleTimer = 0;
     public float maxObstacleTime = 7;
-    public static float obstacleSpeed = 14;
+    public static float obstacleSpeed = 11.3f;
     public static float warningDelay = 1.0f;
     private float warningTimer = 0.0f;
     public GameObject enemyCar;

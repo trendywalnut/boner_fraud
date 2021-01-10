@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
         timer += Time.deltaTime;
         fare = timer / 4;
 
-        fareText.text = "Fare: $" + fare.ToString("F2");
+        fareText.text = "Tip: $" + fare.ToString("F2");
 
         switch (stars)
         {
