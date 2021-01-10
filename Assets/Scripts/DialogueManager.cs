@@ -10,6 +10,9 @@ public class DialogueManager : MonoBehaviour
     public int dialogueI;
     private TypingEffect tEffect;
 
+    public AudioSource dialogueSound;
+    public AudioClip clickSound;
+
     private void Start()
     {
         dialogueI = 0;
@@ -27,8 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true)
         {
-            Debug.Log("Clicked");
-            Debug.Log(dialogueI);
+            dialogueSound.PlayOneShot(clickSound);
             dialogueBoxes[dialogueI].SetActive(false);
             dialogueBoxes[dialogueI + 1].SetActive(true);
             dialogueI++;

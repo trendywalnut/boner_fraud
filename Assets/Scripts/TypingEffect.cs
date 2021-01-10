@@ -17,6 +17,9 @@ public class TypingEffect : MonoBehaviour
     public GameObject strawberry;
     public TextMeshProUGUI textMesh;
 
+    public AudioSource typeSource;
+    public AudioClip typeSound;
+
     private void Start()
     {
         strawberry.SetActive(false);
@@ -47,6 +50,10 @@ public class TypingEffect : MonoBehaviour
     {
         for (int i = 0; i < fullText.Length; i++)
         {
+            if (i % 2 == 0)
+            {
+                typeSource.PlayOneShot(typeSound);
+            }                
             currentText = fullText.Substring(0, i);
             textMesh.text = currentText;
             yield return new WaitForSeconds(delay);
