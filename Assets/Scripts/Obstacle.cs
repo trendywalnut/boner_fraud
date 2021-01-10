@@ -34,7 +34,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.PlaySoundEffect(1);
+        gameManager.PlaySoundEffect(0);
         //Debug.Log("test");
         if (carController.starRating >= 2)
         {
