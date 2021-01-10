@@ -12,11 +12,15 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI fareText;
 
     public float stars;
-    private float fare;
+    private float fare = 0.00f;
     private float timer;
+
+    public bool gameStart = false;
 
     private void Start()
     {
+        gameStart = false;
+
         for (int i = 0; i < starsArray.Length; i++)
         {
             starsArray[i].SetActive(true);
@@ -33,8 +37,11 @@ public class ScoreManager : MonoBehaviour
     {
         stars = carC.starRating;
 
-        timer += Time.deltaTime;
-        fare = timer / 4;
+        if (gameStart)
+        {
+            timer += Time.deltaTime;
+            fare = timer / 4;
+        }        
 
         fareText.text = "Tip: $" + fare.ToString("F2");
 

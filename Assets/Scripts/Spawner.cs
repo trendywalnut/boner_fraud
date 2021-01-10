@@ -23,47 +23,56 @@ public class Spawner : MonoBehaviour
     private int myLane;
     private int obstacleLane;
     private bool isWarning = false;
+    public bool gameStart = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameStart = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(carTimer > maxCarTime){
-            pickRandomLane();
-            GameObject new_car = Instantiate(enemyCar);
-            new_car.transform.position = transform.position;
-            carTimer = 0;
-        }
+        if (gameStart)
+        {
+            if (carTimer > maxCarTime)
+            {
+                pickRandomLane();
+                GameObject new_car = Instantiate(enemyCar);
+                new_car.transform.position = transform.position;
+                carTimer = 0;
+            }
 
-        if(obstacleTimer > maxObstacleTime && !isWarning){
-            pickRandomLane();
-            obstacleLane = myLane;
-            GameObject new_warning = Instantiate(warning);
-            new_warning.transform.position = transform.position;
-            isWarning = true;
-        }
+            if (obstacleTimer > maxObstacleTime && !isWarning)
+            {
+                pickRandomLane();
+                obstacleLane = myLane;
+                GameObject new_warning = Instantiate(warning);
+                new_warning.transform.position = transform.position;
+                isWarning = true;
+            }
 
-        if(warningTimer > warningDelay){
-            yPosition = obsPositions[obstacleLane];
-            transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
-            GameObject new_obstacle = Instantiate(obstacle);
-            new_obstacle.transform.position = transform.position;
-            obstacleTimer = 0;
-            isWarning = false;
-            warningTimer = 0;
-        }
+            if (warningTimer > warningDelay)
+            {
+                yPosition = obsPositions[obstacleLane];
+                transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+                GameObject new_obstacle = Instantiate(obstacle);
+                new_obstacle.transform.position = transform.position;
+                obstacleTimer = 0;
+                isWarning = false;
+                warningTimer = 0;
+            }
 
-        if(isWarning){
-            warningTimer += Time.deltaTime;
-        }
+            if (isWarning)
+            {
+                warningTimer += Time.deltaTime;
+            }
 
-        carTimer += Time.deltaTime;
-        obstacleTimer += Time.deltaTime;
+            carTimer += Time.deltaTime;
+            obstacleTimer += Time.deltaTime;
+        }
+        
     }
 
     void pickRandomLane(){

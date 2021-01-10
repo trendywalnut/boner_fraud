@@ -13,10 +13,19 @@ public class DialogueManager : MonoBehaviour
     public AudioSource dialogueSound;
     public AudioClip clickSound;
 
+    public GameObject spawner, score;
+    private Spawner spawnerScript;
+    private ScoreManager scoreM;
+
     private void Start()
     {
         dialogueI = 0;
         dialogueBoxes[0].SetActive(true);
+
+        score = GameObject.FindGameObjectWithTag("Score");
+        spawner = GameObject.FindGameObjectWithTag("Spawner");
+        spawnerScript = spawner.GetComponent<Spawner>();
+        scoreM = score.GetComponent<ScoreManager>();
 
         tEffect = dialogueBoxes[0].GetComponent<TypingEffect>();
 
@@ -28,13 +37,30 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log("index: " + dialogueI + "\n length: " + dialogueBoxes.Length);
+
         if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true)
         {
-            dialogueSound.PlayOneShot(clickSound);
-            dialogueBoxes[dialogueI].SetActive(false);
-            dialogueBoxes[dialogueI + 1].SetActive(true);
-            dialogueI++;
-            tEffect = dialogueBoxes[dialogueI].GetComponent<TypingEffect>();
+            if (dialogueI == dialogueBoxes.Length - 1)
+            {
+                dialogueBoxes[dialogueI].SetActive(false);
+                dialogueI++;
+            }
+            else
+            {
+                dialogueSound.PlayOneShot(clickSound);
+                dialogueBoxes[dialogueI].SetActive(false);
+                dialogueBoxes[dialogueI + 1].SetActive(true);
+                dialogueI++;
+                tEffect = dialogueBoxes[dialogueI].GetComponent<TypingEffect>();
+            }
+        }
+
+        if (dialogueI == dialogueBoxes.Length)
+        {
+            spawnerScript.gameStart = true;
+            scoreM.gameStart = true;
         }
     }
 }
