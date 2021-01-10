@@ -8,11 +8,14 @@ public class DialogueManager : MonoBehaviour
     public GameObject[] dialogueBoxes;
 
     public int dialogueI;
+    private TypingEffect tEffect;
 
     private void Start()
     {
         dialogueI = 0;
         dialogueBoxes[0].SetActive(true);
+
+        tEffect = dialogueBoxes[0].GetComponent<TypingEffect>();
 
         for (int i = 1; i < dialogueBoxes.Length; i++)
         {
@@ -22,13 +25,14 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true)
         {
             Debug.Log("Clicked");
             Debug.Log(dialogueI);
             dialogueBoxes[dialogueI].SetActive(false);
             dialogueBoxes[dialogueI + 1].SetActive(true);
             dialogueI++;
+            tEffect = dialogueBoxes[dialogueI].GetComponent<TypingEffect>();
         }
     }
 }
