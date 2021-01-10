@@ -8,6 +8,7 @@ public class TypingEffect : MonoBehaviour
 
     public float delay = 0.1f;
 
+    [TextArea(15, 10)]
     public string fullText;
     private string currentText = "";
 
