@@ -8,15 +8,10 @@ public class EnemyCar : MonoBehaviour
 
     public float myCarSpeed;
     public float lifespan = 10;
-
-    private GameObject player;
-    private CarController carController;
     
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        player = GameObject.FindGameObjectWithTag("Player");
-        carController = player.GetComponent<CarController>(); 
         myCarSpeed = Spawner.carSpeed;
     }
 
@@ -34,16 +29,14 @@ public class EnemyCar : MonoBehaviour
     {
         gameManager.PlaySoundEffect(0);
 
-        //Debug.Log("test");
-        if (carController.starRating >= 2)
+        if (gameManager.starRating != 0)
         {
-            carController.starRating--;
-            Debug.Log(carController.starRating);
+            gameManager.starRating--;
+            Debug.Log(gameManager.starRating);
         }
-        else if (carController.starRating == 1)
+        else
         {
-            //game over gottem
-            Debug.Log("end game");
+            gameManager.PlaySoundEffect(3);
         }
     }
 
