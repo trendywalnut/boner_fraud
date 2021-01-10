@@ -32,7 +32,7 @@ public class EnemyCar : MonoBehaviour
         if (gameManager.starRating != 0)
         {
             gameManager.starRating--;
-            Debug.Log(gameManager.starRating);
+            //Debug.Log(gameManager.starRating);
         }
         else
         {

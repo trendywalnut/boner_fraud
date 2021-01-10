@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
 
     public bool gameStart = false;
 
-    private void Start()
+    private void Awake()
     {
         gameStart = false;
 

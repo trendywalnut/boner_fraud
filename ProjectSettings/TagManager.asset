@@ -9,6 +9,7 @@ TagManager:
   - Score
   - game over
   - game over 2
+  - RestartButton
   layers:
   - Default
   - TransparentFX

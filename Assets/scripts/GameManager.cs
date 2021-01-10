@@ -19,9 +19,14 @@ public class GameManager : MonoBehaviour
     public Animator textFade;
     public GameObject blackFadeGO;
     public GameObject text;
+    public GameObject restartButton;
 
     void Awake()
     {
+        restartButton = GameObject.FindGameObjectWithTag("RestartButton");
+        restartButton.SetActive(false);
+
+        Time.timeScale = 1;
         if (FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(this.gameObject);
@@ -31,10 +36,15 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
         aS = GetComponent<AudioSource>();
-        blackFadeGO = GameObject.FindGameObjectWithTag("game over");
-        text = GameObject.FindGameObjectWithTag("game over 2");
-        blackFade = blackFadeGO.GetComponent<Animator>();
-        textFade = blackFadeGO.GetComponent<Animator>();
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            blackFadeGO = GameObject.FindGameObjectWithTag("game over");
+            text = GameObject.FindGameObjectWithTag("game over 2");
+            blackFade = blackFadeGO.GetComponent<Animator>();
+            textFade = blackFadeGO.GetComponent<Animator>();
+        }
+        
     }
 
     // Update is called once per frame
@@ -45,6 +55,15 @@ public class GameManager : MonoBehaviour
             if (aS.clip != musicClips[2] || !aS.isPlaying)
             {
                 aS.clip = musicClips[2];
+                aS.Play();
+            }
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (aS.clip != musicClips[1] || !aS.isPlaying)
+            {
+                aS.clip = musicClips[1];
                 aS.Play();
             }
         }
@@ -67,18 +86,37 @@ public class GameManager : MonoBehaviour
 
     public void amDead()
     {
-        if (starRating == 0)
+        if (starRating == 0 && blackFade != null)
         {
             StartCoroutine(endGame());
             blackFade.Play("fadeAnimation");
             textFade.Play("textFade");
+            restartButton.SetActive(true);
             endGame();
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        starRating = 5;
+        Invoke("ResetVars", .1f);
     }
 
     IEnumerator endGame()
     {
         yield return new WaitForSeconds(4);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
+
+    private void ResetVars()
+    {        
+        restartButton = GameObject.FindGameObjectWithTag("RestartButton");
+        blackFadeGO = GameObject.FindGameObjectWithTag("game over");
+        text = GameObject.FindGameObjectWithTag("game over 2");
+        blackFade = blackFadeGO.GetComponent<Animator>();
+        textFade = blackFadeGO.GetComponent<Animator>();
+        //restartButton.SetActive(false);
+    }
+
 }
