@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyCar : MonoBehaviour
 {
-    
+    public GameManager gameManager;
+
     public float myCarSpeed;
     public float lifespan = 10;
 
@@ -13,6 +14,7 @@ public class EnemyCar : MonoBehaviour
     
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         carController = player.GetComponent<CarController>(); 
         myCarSpeed = Spawner.carSpeed;
@@ -30,6 +32,8 @@ public class EnemyCar : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gameManager.PlaySoundEffect(0);
+
         //Debug.Log("test");
         if (carController.starRating >= 2)
         {

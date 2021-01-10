@@ -38,8 +38,6 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log("index: " + dialogueI + "\n length: " + dialogueBoxes.Length);
-
         if(Input.GetMouseButtonDown(0) && tEffect.allTextShown == true)
         {
             if (dialogueI == dialogueBoxes.Length - 1)

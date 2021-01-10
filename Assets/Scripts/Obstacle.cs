@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    
+    public GameManager gameManager;
+
     public float myObstacleSpeed;
     public float lifespan = 10;
 
@@ -14,6 +15,7 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         carController = player.GetComponent<CarController>();
         myObstacleSpeed = Spawner.obstacleSpeed;
@@ -32,7 +34,8 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
+        gameManager.PlaySoundEffect(1);
+        //Debug.Log("test");
         if (carController.starRating >= 2)
         {
             carController.starRating--;
@@ -41,7 +44,7 @@ public class Obstacle : MonoBehaviour
         else if (carController.starRating == 1)
         {
             //game over gottem
-            Debug.Log("end game");
+            //Debug.Log("end game");
         }
     }
 
