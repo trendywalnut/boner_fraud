@@ -17,16 +17,21 @@ public class DialogueManager : MonoBehaviour
     private Spawner spawnerScript;
     private ScoreManager scoreM;
 
+    public bool inGameScene = false;
+
     private void Start()
     {
         dialogueI = 0;
         dialogueBoxes[0].SetActive(true);
 
-        score = GameObject.FindGameObjectWithTag("Score");
-        spawner = GameObject.FindGameObjectWithTag("Spawner");
-        spawnerScript = spawner.GetComponent<Spawner>();
-        scoreM = score.GetComponent<ScoreManager>();
-
+        if (inGameScene)
+        {
+            score = GameObject.FindGameObjectWithTag("Score");
+            spawner = GameObject.FindGameObjectWithTag("Spawner");
+            spawnerScript = spawner.GetComponent<Spawner>();
+            scoreM = score.GetComponent<ScoreManager>();
+        }
+        
         tEffect = dialogueBoxes[0].GetComponent<TypingEffect>();
 
         for (int i = 1; i < dialogueBoxes.Length; i++)
@@ -55,7 +60,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        if (dialogueI == dialogueBoxes.Length)
+        if (dialogueI == dialogueBoxes.Length && inGameScene)
         {
             spawnerScript.gameStart = true;
             scoreM.gameStart = true;
