@@ -247,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &85009899
 Transform:
   m_ObjectHideFlags: 0
@@ -366,8 +366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548417715cc8ef247b3a13bdb84ae3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 250
   moveSpeed: 300
-  useFourDirections: 0
   starRating: 5
 --- !u!61 &120559576
 BoxCollider2D:
@@ -431,7 +431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &322094652
 Transform:
   m_ObjectHideFlags: 0
