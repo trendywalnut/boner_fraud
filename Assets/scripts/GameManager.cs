@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         restartButton = GameObject.FindGameObjectWithTag("RestartButton");
-        restartButton.SetActive(false);
+        restartButton.GetComponent<Image>().enabled = false;
+        restartButton.GetComponent<Button>().enabled = false;
 
         Time.timeScale = 1;
         if (FindObjectsOfType<GameManager>().Length > 1)
@@ -91,13 +93,15 @@ public class GameManager : MonoBehaviour
             StartCoroutine(endGame());
             blackFade.Play("fadeAnimation");
             textFade.Play("textFade");
-            restartButton.SetActive(true);
+            restartButton.GetComponent<Image>().enabled = true;
+            restartButton.GetComponent<Button>().enabled = true;
             endGame();
         }
     }
 
     public void RestartLevel()
     {
+        Debug.Log("Restart!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         starRating = 5;
         Invoke("ResetVars", .1f);

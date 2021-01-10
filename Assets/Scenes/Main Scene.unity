@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747290474}
+      - m_Target: {fileID: 1306665017}
         m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
@@ -1484,6 +1484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ea1e17e2117164bad9fb5baf0f4519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gMScript: {fileID: 0}
 --- !u!1001 &1376432846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1773,18 +1774,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1984813445587883820}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1747290474 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1539108501134799487, guid: fa0fba88db2204a42bcf92a10715f8a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1984813445587883820}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747290472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b180e992b9ebd4b86edecf71261c7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1747290475
 AudioSource:
   m_ObjectHideFlags: 0
