@@ -50,10 +50,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9448a01fd3080c34fb380dd44f0f20de, type: 3}
   - {fileID: 8300000, guid: 9bf96f3d472cbda4ead806870a7506a3, type: 3}
   - {fileID: 8300000, guid: 07a352b48fe895546a47d1d55dbbea98, type: 3}
+  - {fileID: 8300000, guid: 42bfe739e4dc0ce49bae07b2b118fea6, type: 3}
+  - {fileID: 8300000, guid: 31c05ee1a354e4d408fde6511d31d94b, type: 3}
   musicClips:
   - {fileID: 8300000, guid: effcbf6865455a54bb7d2616de252ca0, type: 3}
   - {fileID: 8300000, guid: a81cadb3bd9a15841897f2b5a591ccb4, type: 3}
   - {fileID: 8300000, guid: 165666147e6f02e4599fb85ee48c6e91, type: 3}
+  starRating: 5
+  blackFade: {fileID: 0}
+  textFade: {fileID: 0}
+  blackFadeGO: {fileID: 0}
+  text: {fileID: 0}
 --- !u!82 &2628375968439493697
 AudioSource:
   m_ObjectHideFlags: 0
