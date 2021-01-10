@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6895480986660277563
+--- !u!1 &7462483186067793540
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6895480986660277561}
-  - component: {fileID: 6895480986660277560}
+  - component: {fileID: 7462483186067793538}
+  - component: {fileID: 7462483186067793539}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: SignSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6895480986660277561
+--- !u!4 &7462483186067793538
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6895480986660277563}
+  m_GameObject: {fileID: 7462483186067793540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.4451184, y: -0.59933937, z: 10.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6895480986660277560
+--- !u!114 &7462483186067793539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6895480986660277563}
+  m_GameObject: {fileID: 7462483186067793540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6381d0536ea54b4386d47332564fa91, type: 3}
+  m_Script: {fileID: 11500000, guid: 743f5aff742aa4644bcfa5a30e9cc32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCarTime: 3
-  maxObstacleTime: 7
-  enemyCar: {fileID: 4951339264748444395, guid: 956db7bacefcf774384f80bb89095ed6,
+  maxSmallSignTime: 8.1
+  maxBigSignTime: 14.3
+  smallSignSpeed: 12
+  bigSignSpeed: 16
+  smallSign1: {fileID: 1988783434698405057, guid: b8d9f3f6ba1f60541a4222df093b73c4,
     type: 3}
-  obstacle: {fileID: 6058710672580094100, guid: 3f2fc6c318cbe834b9c2a6bd68eb6cc6,
+  smallSign2: {fileID: 7612289382338381613, guid: 0abc408f1dbd48147b1764b2e6ae9fad,
     type: 3}
-  warning: {fileID: 3089144129186342167, guid: 9c6571fd0ef06454cb368debbb6d5b61, type: 3}
-  carPositions:
-  - 1.5
-  - -0.4
-  - -1.95
-  obsPositions:
-  - 1.3
-  - -0.5
-  - -2.5
+  bigSign: {fileID: 5946507022254563396, guid: e8f0285e73225ee4299ea4d9a003433d, type: 3}

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 254de9eebf1dbf84db5945e9682dd4ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5780929ce25a74eb6ba4e969db7988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCarSpeed: 0
+  myCarSpeed: 10
   lifespan: 10
 --- !u!61 &8952164414134831773
 BoxCollider2D:

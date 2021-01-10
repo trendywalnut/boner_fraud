@@ -13,7 +13,7 @@ public class WarningSign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(9.0f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(4f, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
