@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Spawner
   - Score
+  - game over
+  - game over 2
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
 
     public GameObject[] starsArray;
     public GameObject player;
-    public CarController carC;
+    public GameManager gameManager;
     public TextMeshProUGUI fareText;
 
     public float stars;
@@ -29,13 +29,13 @@ public class ScoreManager : MonoBehaviour
         fare = 0;
         timer = 0;
         player = GameObject.FindGameObjectWithTag("Player");
-        carC = player.GetComponent<CarController>();
-        stars = carC.starRating;
+        gameManager = FindObjectOfType<GameManager>();
+        stars = gameManager.starRating;
     }
 
     private void Update()
     {
-        stars = carC.starRating;
+        stars = gameManager.starRating;
 
         if (gameStart)
         {

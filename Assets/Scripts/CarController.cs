@@ -11,7 +11,7 @@ public class CarController : MonoBehaviour
     public float maxSpeed = 5;
     public float moveSpeed;
 
-    public float starRating = 5;
+    
 
     public bool classicControl;
 
