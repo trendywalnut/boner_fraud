@@ -33,6 +33,8 @@ public class Spawner : MonoBehaviour
     private bool isWarning = false;
     private bool isCopWarning = false;
     public bool gameStart = false;
+    public GameObject[] enemyCars;
+    public GameObject[] obstacles;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +50,7 @@ public class Spawner : MonoBehaviour
             if (carTimer > maxCarTime)
             {
                 pickRandomLane();
-                GameObject new_car = Instantiate(enemyCar);
+                GameObject new_car = Instantiate(enemyCars[Random.Range(0, enemyCars.Length)]);
                 new_car.transform.position = transform.position;
                 carTimer = 0;
             }
@@ -66,7 +68,7 @@ public class Spawner : MonoBehaviour
             {
                 yPosition = obsPositions[obstacleLane];
                 transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
-                GameObject new_obstacle = Instantiate(obstacle);
+                GameObject new_obstacle = Instantiate(obstacles[Random.Range(0, obstacles.Length)]);
                 new_obstacle.transform.position = transform.position;
                 obstacleTimer = 0;
                 isWarning = false;

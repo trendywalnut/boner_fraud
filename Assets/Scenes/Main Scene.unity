@@ -3472,9 +3472,96 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
         type: 3}
+      propertyPath: enemyCars.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: obstacles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: enemyCars.Array.data[0]
+      value: 
+      objectReference: {fileID: 4951339264748444395, guid: 113377ff6f85fd5448e7ccee38519121,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: enemyCars.Array.data[1]
+      value: 
+      objectReference: {fileID: 4951339264748444395, guid: 5fa6531b5a1618a4db4e68d8aacf69f8,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: enemyCars.Array.data[2]
+      value: 
+      objectReference: {fileID: 4951339264748444395, guid: 62ba7143cbbdc3548b5a2b28de2ed9f2,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: enemyCars.Array.data[3]
+      value: 
+      objectReference: {fileID: 4951339264748444395, guid: 52a563f3a74874c4e877351a5f88e284,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: enemyCars.Array.data[4]
+      value: 
+      objectReference: {fileID: 4951339264748444395, guid: 956db7bacefcf774384f80bb89095ed6,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: obstacles.Array.data[0]
+      value: 
+      objectReference: {fileID: 7973461225810459476, guid: d290384dfaaae3a4ca09d2790b1d629a,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: obstacles.Array.data[1]
+      value: 
+      objectReference: {fileID: 3384222047688597416, guid: 6753b8b4d9b479048a62ed7785a65f16,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
       propertyPath: positions.Array.data[2]
       value: -1.95
       objectReference: {fileID: 0}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4733d7aa03376c74eb1cf689e9aca908,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c06fbf4b01ee91479bfe7e36e34e08d,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 254de9eebf1dbf84db5945e9682dd4ca,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: da9bfabef94ef1c409f23c356940753f,
+        type: 3}
+    - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
+        type: 3}
+      propertyPath: carSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0fdabc0ed29cef04cbd617e290bf1fbe,
+        type: 3}
     - target: {fileID: 6895480986660277560, guid: 2dc0a93ef7c87fd47a75fd634a71a504,
         type: 3}
       propertyPath: copPositions.Array.data[0]
