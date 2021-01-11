@@ -11,8 +11,6 @@ public class CarController : MonoBehaviour
     public float maxSpeed = 5;
     public float moveSpeed;
 
-    
-
     public bool classicControl;
 
     private void Start()
@@ -54,4 +52,14 @@ public class CarController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        this.gameObject.GetComponent<Animator>().SetBool("Flash?", true);
+        Invoke("StopAnimating", 0.4f);
+    }
+
+    private void StopAnimating()
+    {
+        this.gameObject.GetComponent<Animator>().SetBool("Flash?", false);
+    }
 }

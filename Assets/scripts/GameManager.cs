@@ -42,6 +42,12 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            car = GameObject.FindGameObjectWithTag("Player");
+            car.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         aS = GetComponent<AudioSource>();
     }
 
@@ -134,7 +140,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator endGame()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(0);
         car.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 
