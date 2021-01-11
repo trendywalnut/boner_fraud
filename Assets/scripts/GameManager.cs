@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject restartButton;
     public GameObject quitButton;
 
+
     public GameObject spawner;
     public Spawner spawnerScript;
 
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("im alive");
         Time.timeScale = 1;
         if (FindObjectsOfType<GameManager>().Length > 1)
         {
@@ -41,10 +43,18 @@ public class GameManager : MonoBehaviour
         }
 
         aS = GetComponent<AudioSource>();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Debug.Log("scene 2");
+        }
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-
+            Debug.Log("find stuff");
             car = GameObject.FindGameObjectWithTag("Player");
             car.gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
@@ -62,10 +72,9 @@ public class GameManager : MonoBehaviour
             blackFadeGO = GameObject.FindGameObjectWithTag("game over");
             text = GameObject.FindGameObjectWithTag("game over 2");
             blackFade = blackFadeGO.GetComponent<Animator>();
-            textFade = blackFadeGO.GetComponent<Animator>();
+            textFade = text.GetComponent<Animator>();
         }
     }
-
     void Update()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -90,9 +99,10 @@ public class GameManager : MonoBehaviour
         {
             if (aS.clip != musicClips[1] && spawnerScript.gameStart || !aS.isPlaying && spawnerScript.gameStart)
             {
+                Debug.Log("music play");
+                aS.Stop();
                 aS.clip = musicClips[1];
                 aS.Play();
-                aS.loop = true;
             }
         }
     }
@@ -137,7 +147,7 @@ public class GameManager : MonoBehaviour
         blackFadeGO = GameObject.FindGameObjectWithTag("game over");
         text = GameObject.FindGameObjectWithTag("game over 2");
         blackFade = blackFadeGO.GetComponent<Animator>();
-        textFade = blackFadeGO.GetComponent<Animator>();
+        textFade = text.GetComponent<Animator>();
         //restartButton.SetActive(false);
     }
 
