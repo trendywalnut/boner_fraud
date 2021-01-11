@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public AudioSource dialogueSound;
     public AudioClip clickSound;
 
+    public Animator anim;
+
     public GameObject spawner, score;
     private Spawner spawnerScript;
     private ScoreManager scoreM;
