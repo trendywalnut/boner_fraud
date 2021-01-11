@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Restart!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         starRating = 5;
-        aS.Stop();
+        //aS.Stop();
         Invoke("ResetVars", .1f);
     }
 
