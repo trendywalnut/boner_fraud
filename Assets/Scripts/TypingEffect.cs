@@ -24,7 +24,7 @@ public class TypingEffect : MonoBehaviour
     private void Start()
     {
         strawberry.SetActive(false);
-        typeSource.volume = 0.7f;
+        typeSource.volume = 0.5f;
     }
 
     private void Update()

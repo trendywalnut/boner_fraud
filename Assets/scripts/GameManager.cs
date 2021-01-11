@@ -21,13 +21,15 @@ public class GameManager : MonoBehaviour
     public GameObject blackFadeGO;
     public GameObject text;
     public GameObject restartButton;
+    public GameObject quitButton;
+
+    public GameObject spawner;
+    public Spawner spawnerScript;
+
+    public GameObject car;
 
     void Awake()
     {
-        restartButton = GameObject.FindGameObjectWithTag("RestartButton");
-        restartButton.GetComponent<Image>().enabled = false;
-        restartButton.GetComponent<Button>().enabled = false;
-
         Time.timeScale = 1;
         if (FindObjectsOfType<GameManager>().Length > 1)
         {
@@ -37,19 +39,33 @@ public class GameManager : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
         }
+
         aS = GetComponent<AudioSource>();
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
+
+            car = GameObject.FindGameObjectWithTag("Player");
+            car.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+            spawner = GameObject.FindGameObjectWithTag("Spawner");
+            spawnerScript = spawner.GetComponent<Spawner>();
+
+            restartButton = GameObject.FindGameObjectWithTag("RestartButton");
+            quitButton = GameObject.FindGameObjectWithTag("QuitButton");
+
+            restartButton.GetComponent<Button>().enabled = false;
+            restartButton.GetComponent<Image>().enabled = false;
+            quitButton.GetComponent<Button>().enabled = false;
+            quitButton.GetComponent<Image>().enabled = false;
+
             blackFadeGO = GameObject.FindGameObjectWithTag("game over");
             text = GameObject.FindGameObjectWithTag("game over 2");
             blackFade = blackFadeGO.GetComponent<Animator>();
             textFade = blackFadeGO.GetComponent<Animator>();
         }
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -63,20 +79,20 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if (aS.clip != musicClips[1] || !aS.isPlaying)
+            if (aS.clip != musicClips[0] || !aS.isPlaying)
             {
-                aS.clip = musicClips[1];
+                aS.clip = musicClips[0];
                 aS.Play();
             }
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            amDead();
-            if (aS.clip != musicClips[1] || !aS.isPlaying)
+            if (aS.clip != musicClips[1] && spawnerScript.gameStart || !aS.isPlaying && spawnerScript.gameStart)
             {
                 aS.clip = musicClips[1];
-                //aS.Play();
+                aS.Play();
+                aS.loop = true;
             }
         }
     }
@@ -88,15 +104,13 @@ public class GameManager : MonoBehaviour
 
     public void amDead()
     {
-        if (starRating == 0 && blackFade != null)
-        {
             StartCoroutine(endGame());
             blackFade.Play("fadeAnimation");
             textFade.Play("textFade");
             restartButton.GetComponent<Image>().enabled = true;
             restartButton.GetComponent<Button>().enabled = true;
-            endGame();
-        }
+            quitButton.GetComponent<Button>().enabled = true;
+            quitButton.GetComponent<Image>().enabled = true;
     }
 
     public void RestartLevel()
@@ -104,18 +118,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("Restart!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         starRating = 5;
+        aS.Stop();
         Invoke("ResetVars", .1f);
     }
 
     IEnumerator endGame()
     {
         yield return new WaitForSeconds(4);
-        //Time.timeScale = 0;
+        car.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void ResetVars()
-    {        
+    {
+        spawnerScript.gameStart = false;
+        car = GameObject.FindGameObjectWithTag("Player");
         restartButton = GameObject.FindGameObjectWithTag("RestartButton");
+        quitButton = GameObject.FindGameObjectWithTag("QuitButton");
         blackFadeGO = GameObject.FindGameObjectWithTag("game over");
         text = GameObject.FindGameObjectWithTag("game over 2");
         blackFade = blackFadeGO.GetComponent<Animator>();

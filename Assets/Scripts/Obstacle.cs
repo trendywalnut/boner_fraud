@@ -31,14 +31,16 @@ public class Obstacle : MonoBehaviour
     {
         gameManager.PlaySoundEffect(0);
         //Debug.Log("test");
-        if (gameManager.starRating != 0)
+        if (gameManager.starRating >= 1)
         {
             gameManager.starRating--;
-            Debug.Log(gameManager.starRating);
+            //Debug.Log(gameManager.starRating);
         }
-        else
+        if (gameManager.starRating <= 0)
         {
+            gameManager.starRating--;
             gameManager.PlaySoundEffect(3);
+            gameManager.amDead();
         }
     }
 

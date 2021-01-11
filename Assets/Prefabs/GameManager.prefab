@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8871397996913938172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b114f32d6142af4caa832d8d46f54e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 05b180e992b9ebd4b86edecf71261c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sfxClips:

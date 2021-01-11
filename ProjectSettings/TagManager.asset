@@ -10,6 +10,7 @@ TagManager:
   - game over
   - game over 2
   - RestartButton
+  - QuitButton
   layers:
   - Default
   - TransparentFX

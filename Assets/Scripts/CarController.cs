@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
 
-    private Transform tf;
+    public Transform tf;
     private Rigidbody2D rb;
 
     public float maxSpeed = 5;
