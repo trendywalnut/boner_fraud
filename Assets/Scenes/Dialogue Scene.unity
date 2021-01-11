@@ -651,8 +651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -786,8 +785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -2192,8 +2190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -2475,8 +2472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -3198,8 +3194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -4631,8 +4626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -5772,8 +5766,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-    Sample Text Sample Text Sample Text '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -6103,8 +6096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text
-    Sample Text Sample Text Sample Text '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -8228,8 +8220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -8318,8 +8309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3 Sample Text 3
-    Sample Text 3 Sample Text 3 Sample Text 3 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -8856,8 +8846,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 4 Sample Text 4 Sample Text 4 Sample Text 4 Sample Text 4
-    Sample Text 4 Sample Text 4 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -8946,8 +8935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample Text 4 Sample Text 4 Sample Text 4 Sample Text 4 Sample Text 4
-    Sample Text 4 Sample Text 4 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -9182,8 +9170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Text  2 Sample Text  2 Sample Text  2 Sample Text  2 Sample Text 
-    2 Sample Text  2 Sample Text  2 Sample Text  2
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
@@ -9272,8 +9259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Text  2 Sample Text  2 Sample Text  2 Sample Text  2 Sample Text 
-    2 Sample Text  2 Sample Text  2 Sample Text  2
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b14a4de58e21f14468cbb21037e6a46f, type: 2}
   m_sharedMaterial: {fileID: -6697578105224375200, guid: b14a4de58e21f14468cbb21037e6a46f,
