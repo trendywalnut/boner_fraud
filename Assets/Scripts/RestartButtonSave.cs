@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class RestartButtonSave : MonoBehaviour
 {
+
+    public GameManager gMScript;
+
     private void Awake()
     {
-        if (GameObject.FindGameObjectsWithTag("RestartButton").Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        gMScript = FindObjectOfType<GameManager>();
+    }
+
+    public void RestartLevel()
+    {
+        gMScript.RestartLevel();    
     }
 }
